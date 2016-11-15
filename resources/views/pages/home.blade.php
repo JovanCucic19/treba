@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('welcome')
 @section('content')
-    i am the home page
+    <h1>Kliknup</h1>
 @endsection

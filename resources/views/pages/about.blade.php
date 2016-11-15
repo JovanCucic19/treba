@@ -1,4 +1,4 @@
-@extends('layouts.sidebar')
+@extends('welcome')
 @section('content')
-    i am the about page
+    <p>Kliknuo si na vaucere</p>
 @stop

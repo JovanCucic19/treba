@@ -1,1 +1,1 @@
-<div id="copyright text-right">© Copyright 2016 Sta mi treba</div>
+<div class="footer">© Copyright 2016 Sta mi treba</div>

@@ -6,22 +6,19 @@
     </head>
 
     <body>
-      <div class="container">
+      <div class="page-wrap">
 
-        <header class="row">
+        <div class="nav_box">
           @include('includes.header')
-        </header>
-
-        <h1 class="h1">Neki sadrzaj sa welcome.blade.php stranice!</h1>
-
-        <div id="main" class="row">
-          @yield('content')
         </div>
 
-        <footer class="row">
-          @include('includes.footer')
-        </footer>
+        <div class="main_box">
+          @yield('content')
+        </div>
+      </div>
 
+      <div class="footer">
+        @include('includes.footer')
       </div>
     </body>
 </html>
