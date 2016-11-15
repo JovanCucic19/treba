@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2016 at 12:03 AM
+-- Generation Time: Nov 16, 2016 at 12:50 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -107,8 +107,8 @@ CREATE TABLE `vaucer_putovanje` (
 --
 
 INSERT INTO `vaucer_putovanje` (`v_putovanje_id`, `v_putovanje_naziv`, `v_putovanje_slika`, `v_putovanje_ponuda`, `v_putovanje_kolicina`, `v_putovanje_vrednost`) VALUES
-(1, 'Putovanje 1', 'Slika 1', 'Neka ponuda za putovanje 1', 4, '13000'),
-(2, 'Putovanje 2', 'Slika 2', 'Neka ponuda za putovanje 2', 3, '7000');
+(1, 'Putovanje 1', '\\test\\resources\\img\\v_putovanja\\african-safari-scene_1048-118.jpg', 'Neka ponuda za putovanje 1', 4, '13000'),
+(2, 'Putovanje 2', '\\test\\resources\\img\\v_putovanja\\india_demo.jpg', 'Neka ponuda za putovanje 2', 3, '7000');
 
 -- --------------------------------------------------------
 

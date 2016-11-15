@@ -53,12 +53,18 @@ return [
         ],
 
         'mysql' => [
+            'read' => [
+                'host' => 'localhost',
+                      ],
+            'write' => [
+                'host' => 'localhost'
+                        ],
             'driver' => 'mysql',
             'host' => env('DB_HOST', 'localhost'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'database' => env('sta', 'sta'),
+            'username' => env('root', 'root'),
+            'password' => env('', ''),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',

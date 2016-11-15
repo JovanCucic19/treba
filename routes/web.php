@@ -11,26 +11,22 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-//
-// Route::get('/test', function(){
-//     return view('test');
-// });
-
 Route::get('/', function()
 {
     return view('welcome');
 });
-Route::get('about', function()
+// Route::get('about', function()
+// {
+//     return view('pages.about');
+// });
+
+Route::get('vauceri','SelectController@selectAllVauceriPutovanje');
+
+Route::get('vizitKarte', function()
 {
-    return view('pages.about');
+    return view('pages.vizitKarte');
 });
-Route::get('projects', function()
-{
-    return view('pages.projects');
-});
+
 Route::get('contact', function()
 {
     return view('pages.contact');

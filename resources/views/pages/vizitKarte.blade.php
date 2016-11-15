@@ -1,4 +1,4 @@
 @extends('welcome')
 @section('content')
-    i am the projects page
+    <h1> Kliknuo si na vizit karte! </h1>
 @endsection
