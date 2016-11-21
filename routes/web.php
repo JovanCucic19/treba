@@ -20,7 +20,15 @@ Route::get('/', function()
 //     return view('pages.about');
 // });
 
-Route::get('vauceri','SelectController@selectAllVauceriPutovanje');
+Route::get('/vauceri/VaucerNav', function(){
+  return view('pages.vauceri.VaucerNav');
+});
+
+
+// Rutiranje za /vaucer URI ; Mislim da moze da se uradi drugacije - PROVERITI!
+Route::get('/vauceri/SviVauceri','VaucerController@selectAllVauceri');
+Route::get('/vauceri/putovanja','VaucerController@selectPutovanjaVauceri');
+Route::get('/vauceri/usluga','VaucerController@selectUslugeVauceri');
 
 Route::get('vizitKarte', function()
 {

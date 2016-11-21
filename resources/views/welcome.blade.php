@@ -16,6 +16,8 @@
         </div>
       </div>
 
+      <div class="pushBox"></div>
+
       <div class="footer">
         @include('includes.footer')
       </div>

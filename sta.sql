@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 16, 2016 at 12:50 AM
+-- Generation Time: Nov 21, 2016 at 12:46 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -90,48 +90,28 @@ INSERT INTO `reklame` (`reklama_id`, `reklama_naziv`, `reklama_opis`, `reklama_p
 -- --------------------------------------------------------
 
 --
--- Table structure for table `vaucer_putovanje`
+-- Table structure for table `vauceri`
 --
 
-CREATE TABLE `vaucer_putovanje` (
-  `v_putovanje_id` int(11) NOT NULL,
-  `v_putovanje_naziv` varchar(100) NOT NULL,
-  `v_putovanje_slika` varchar(300) NOT NULL,
-  `v_putovanje_ponuda` varchar(500) NOT NULL,
-  `v_putovanje_kolicina` int(2) NOT NULL,
-  `v_putovanje_vrednost` decimal(6,0) NOT NULL
+CREATE TABLE `vauceri` (
+  `v_id` int(11) NOT NULL,
+  `v_naziv` varchar(100) NOT NULL,
+  `v_slika` varchar(300) NOT NULL,
+  `v_ponuda` varchar(300) NOT NULL,
+  `v_kolicina` int(3) NOT NULL,
+  `v_vrednost` decimal(8,2) NOT NULL,
+  `v_tip` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `vaucer_putovanje`
+-- Dumping data for table `vauceri`
 --
 
-INSERT INTO `vaucer_putovanje` (`v_putovanje_id`, `v_putovanje_naziv`, `v_putovanje_slika`, `v_putovanje_ponuda`, `v_putovanje_kolicina`, `v_putovanje_vrednost`) VALUES
-(1, 'Putovanje 1', '\\test\\resources\\img\\v_putovanja\\african-safari-scene_1048-118.jpg', 'Neka ponuda za putovanje 1', 4, '13000'),
-(2, 'Putovanje 2', '\\test\\resources\\img\\v_putovanja\\india_demo.jpg', 'Neka ponuda za putovanje 2', 3, '7000');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `vaucer_usluge`
---
-
-CREATE TABLE `vaucer_usluge` (
-  `v_usluge_id` int(11) NOT NULL,
-  `v_usluge_naziv` varchar(100) NOT NULL,
-  `v_usluge_slika` varchar(300) NOT NULL,
-  `v_usluge_ponuda` varchar(500) NOT NULL,
-  `v_usluge_kolicina` int(2) NOT NULL,
-  `v_usluge_vrednost` decimal(6,2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `vaucer_usluge`
---
-
-INSERT INTO `vaucer_usluge` (`v_usluge_id`, `v_usluge_naziv`, `v_usluge_slika`, `v_usluge_ponuda`, `v_usluge_kolicina`, `v_usluge_vrednost`) VALUES
-(1, 'Usluga 1', 'Slika 1', 'Ponuda usluge 1', 6, '300.00'),
-(2, 'Usluga 2', 'Slika 2', 'Ponuda usluge 2', 13, '778.99');
+INSERT INTO `vauceri` (`v_id`, `v_naziv`, `v_slika`, `v_ponuda`, `v_kolicina`, `v_vrednost`, `v_tip`) VALUES
+(1, 'Putovanje 1', '\\test\\resources\\img\\v_putovanja\\african-safari-scene_1048-118.jpg', 'Neka ponuda za putovanje 1', 4, '13000.00', 'v_putovanje'),
+(2, 'Putovanje 2', '\\test\\resources\\img\\v_putovanja\\india_demo.jpg', 'Neka ponuda za putovanje 2', 3, '7000.00', 'v_putovanje'),
+(3, 'Usluga 1', '\\test\\resources\\img\\v_usluge\\Majic-Carpet-Cleaning.jpg', 'Pranje tepiha', 6, '1299.99', 'v_usluge'),
+(4, 'Usluga 2', '\\test\\resources\\img\\v_usluge\\lava-rapido-1.gif', 'Pranje kola', 10, '499.99', 'v_usluge');
 
 --
 -- Indexes for dumped tables
@@ -156,16 +136,10 @@ ALTER TABLE `reklame`
   ADD PRIMARY KEY (`reklama_id`);
 
 --
--- Indexes for table `vaucer_putovanje`
+-- Indexes for table `vauceri`
 --
-ALTER TABLE `vaucer_putovanje`
-  ADD PRIMARY KEY (`v_putovanje_id`);
-
---
--- Indexes for table `vaucer_usluge`
---
-ALTER TABLE `vaucer_usluge`
-  ADD PRIMARY KEY (`v_usluge_id`);
+ALTER TABLE `vauceri`
+  ADD PRIMARY KEY (`v_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -187,15 +161,10 @@ ALTER TABLE `korisnici`
 ALTER TABLE `reklame`
   MODIFY `reklama_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `vaucer_putovanje`
+-- AUTO_INCREMENT for table `vauceri`
 --
-ALTER TABLE `vaucer_putovanje`
-  MODIFY `v_putovanje_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `vaucer_usluge`
---
-ALTER TABLE `vaucer_usluge`
-  MODIFY `v_usluge_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `vauceri`
+  MODIFY `v_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
