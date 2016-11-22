@@ -4,7 +4,7 @@
           </a>
           <ul class="nav">
               <li><a href="/test/public">Home</a></li>
-              <li><a href="/test/public/vauceri/VaucerNav">Vauceri</a></li>
+              <li><a href="/test/public/vauceri/SviVauceri">Vauceri</a></li>
               <li><a href="/test/public/vizitKarte">Vizit karte</a></li>
               <li><a href="/test/public/contact">Oglasi</a></li>
               <li><a href="/test/public/vauceri/test">Test link</a></li>

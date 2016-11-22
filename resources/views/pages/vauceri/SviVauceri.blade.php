@@ -1,10 +1,44 @@
 @extends('pages.vauceri.VaucerNav')
 @section('sadrzaj_vaucera')
 
-    <h1>Svi vauceri</h1>
+  <div class="row">
+    <div class="col-md-4">
+      <h1>Svi vauceri</h1>
+    </div>
+    <div class="col-md-4 col-md-offset-4 kreirajVaucerPadd">
+      <!-- Trigger/Open The Modal -->
+        <button id="myBtn" class="btnKreiraj">Kreiraj vaučer</button>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="close">×</span>
+              <h2>Kreiraj vaucer</h2>
+            </div>
+            <div class="modal-body">
+              <input type="text" name="ponuda" placeholder="Unesi ponudu" class="txtKreirajVaucer">
+            </br>
+              <input type="text" name="cena" placeholder="Unesi cenu vaucera" class="txtKreirajVaucer">
+            </br>
+              <input type="text" name="cena_sa_popustom" placeholder="Cena vaucera sa popustom" class="txtKreirajVaucer">
+            </br>
+              <input type="submit" name="submit" value="Pošalji" class="sbmKreirajVaucer">
+            </div>
+            <div class="modal-footer">
+              <h3>© Copyright 2016 Sta mi treba</h3>
+            </div>
+          </div>
+
+        </div>
+    </div>
+  </div>
+
     @foreach($vauceri as $v)
+
       <div class="pin">
-        <img src="{{ $v->v_slika  }}" >
+        <img src="{{ $v->v_slika }}" >
         <div class="col-lg border_bot_solid">
           <p class="text-center">{{ $v->v_ponuda }}</p>
         </div>
@@ -25,6 +59,6 @@
           </div>
         </div>
       </div>
-    @endforeach
 
+    @endforeach
 @stop

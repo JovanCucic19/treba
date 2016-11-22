@@ -3,6 +3,7 @@
 
     <h1>Putovanja</h1>
     @foreach($vauceri as $v)
+
       <div class="pin">
         <img src="{{ $v->v_slika }}" >
         <div class="col-lg border_bot_solid">
@@ -25,6 +26,7 @@
           </div>
         </div>
       </div>
+
     @endforeach
 
 @stop

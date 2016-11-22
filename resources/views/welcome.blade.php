@@ -5,7 +5,7 @@
     </head>
 
     <body>
-      <div class="page-wrap">
+      <div class="container">
 
         <div class="nav_box">
           @include('includes.header')
@@ -13,13 +13,13 @@
 
         <div class="main_box">
           @yield('content')
+
+          <div class="pushFuter"></div>
+          <div class="futer">
+                @include('includes.footer')
+          </div>
         </div>
       </div>
 
-      <div class="pushBox"></div>
-
-      <div class="footer">
-        @include('includes.footer')
-      </div>
     </body>
 </html>

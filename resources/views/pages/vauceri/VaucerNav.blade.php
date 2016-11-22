@@ -30,7 +30,6 @@
       </div>
     </div>
 
-    <h2>Ovde hocemo da ispisemo sve vaucere</h2>
     <div class="pushBox"></div>
     @yield('sadrzaj_vaucera')
 
